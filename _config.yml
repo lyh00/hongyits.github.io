@@ -5,17 +5,17 @@ description: 欢迎来到我的个人站~
 # 头像里面的标题
 avatarTitle: 黄宏源
 # 头像里面的描述
-avatarDesc: 前端/后端/都很
+avatarDesc: 前端/后端/
 url: "http://www.huanghongyuan.cn"
 
 # Comment
 comment:
-    disqus: leopard
-    # uyan: 2143225  # 有言id,登录有言官网申请
+    disqus: hongyits
+    uyan: 2149458  # 有言id,登录有言官网申请
 
 # Social
 social:
-    weibo: 不改了不改了hhy     
+    weibo: 不改了不改了hhy
     github: hongyits
 
 # 百度统计 
