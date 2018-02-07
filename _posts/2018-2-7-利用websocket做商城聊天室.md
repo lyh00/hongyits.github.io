@@ -152,7 +152,7 @@ tag: 个人学习
 
 }
 
-##在xml配置拦截器，并且添加xml规范。
+##在xml配置中拦截器，并且添加xml规范(xmlns:websocket及xsi:schemaLocation)。
 	<!-- 配置好处理器 -->
 	<bean id="websocketHandler" class="com.huanghongyuan.front.webSocket.MyWebSocketHandler" />
 	<!-- 配置拦截器 -->
@@ -162,8 +162,7 @@ tag: 个人学习
 			<bean class="com.huanghongyuan.front.webSocket.MyHandShakeInterceptor" />
 		</websocket:handshake-interceptors>
 	</websocket:handlers>
-xmlns:websocket="http://www.springframework.org/schema/websocket"
-xsi:schemaLocation =  http://www.springframework.org/schema/websocket http://www.springframework.org/schema/websocket/spring-websocket.xsd
+
 ##添加websocket的jar包，注意：websocket-api跟websocket会有冲突，取websocket即可。
 <!--WebSocket 依赖 -->
 		<dependency>
