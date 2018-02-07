@@ -32,7 +32,7 @@ tag: 个人学习
 
 
 ##配置一个拦截器
-	 // websocket握手拦截器 拦截握手前，握手后的两个切面
+	//websocket握手拦截器 拦截握手前，握手后的两个切面
 	public class MyHandShakeInterceptor extends HttpSessionHandshakeInterceptor {
 	@Override
 	public boolean beforeHandshake(ServerHttpRequest serverHttpRequest, ServerHttpResponse serverHttpResponse,
@@ -64,6 +64,7 @@ tag: 个人学习
 			WebSocketHandler webSocketHandler, Exception arg3) {
 
 	}
+
 	}
 ##配置一个handler
 	@Component
