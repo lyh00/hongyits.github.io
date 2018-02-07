@@ -6,7 +6,9 @@ description: "一一一一一"
 tag: 个人学习
 ---
 最近在做毕设的时候，要做一个买家跟卖家之间的聊天功能。考虑到二者之间要来回互动，所以用activeMQ的话要配置太多监听器，感觉很麻烦，正好websocket面试经常用到，所以选择websocket加zdialog实现这个功能。
+
 ###首先，实现websocket的有2种方式，[实现websocket的两种方式](http://blog.csdn.net/zzhao114/article/details/60154017)，因为我框架是SSM，因为对spring不太熟，所以虽然不难，但是途中配置还是出现了几个问题，浪费了点时间，所以记录下来，以提高以后再用到的效率。
+
 ##创建一个配置文件，在这边添加拦截器跟handler。注意：这边路径名后缀要跟拦截的后缀一样，因为这个东西耽搁了有一会。
 	
 	 // Component注解告诉SpringMVC该类是一个SpringIOC容器下管理的类
