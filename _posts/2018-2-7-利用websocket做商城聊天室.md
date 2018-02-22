@@ -236,3 +236,5 @@ tag: 个人学习
 		$("#charRoomShow2").append(appendMsg);
 		ws.send(JSON.stringify(data)); //将对象封装成JSON后发送至服务器
 	}
+
+##
