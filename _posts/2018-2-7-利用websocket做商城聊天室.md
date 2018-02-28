@@ -7,9 +7,9 @@ tag: 个人学习
 ---
 最近在做毕设的时候，要做一个买家跟卖家之间的聊天功能。考虑到二者之间要来回互动，所以用activeMQ的话要配置太多监听器，感觉很麻烦，正好websocket面试经常用到，所以选择websocket加zdialog实现这个功能。
 
-###首先，实现websocket的有2种方式，[实现websocket的两种方式](http://blog.csdn.net/zzhao114/article/details/60154017)，因为我框架是SSM，因为对spring不太熟，所以虽然不难，但是途中配置还是出现了几个问题，浪费了点时间，所以记录下来，以提高以后再用到的效率。
+## 首先，实现websocket的有2种方式，[实现websocket的两种方式](http://blog.csdn.net/zzhao114/article/details/60154017)，因为我框架是SSM，因为对spring不太熟，所以虽然不难，但是途中配置还是出现了几个问题，浪费了点时间，所以记录下来，以提高以后再用到的效率。
 
-##创建一个配置文件，在这边添加拦截器跟handler。注意：这边路径名后缀要跟拦截的后缀一样，因为这个东西耽搁了有一会。
+## 创建一个配置文件，在这边添加拦截器跟handler。注意：这边路径名后缀要跟拦截的后缀一样，因为这个东西耽搁了有一会。
 	
 	 // Component注解告诉SpringMVC该类是一个SpringIOC容器下管理的类
 	 // 其实@Controller, @Service, @Repository是@Component的细化
@@ -33,7 +33,7 @@ tag: 个人学习
 	}
 
 
-##配置一个拦截器
+## 配置一个拦截器
 	//websocket握手拦截器 拦截握手前，握手后的两个切面
 	public class MyHandShakeInterceptor extends HttpSessionHandshakeInterceptor {
 	@Override
@@ -68,7 +68,7 @@ tag: 个人学习
 	}
 
 	}
-##配置一个handler
+## 配置一个handler
 	@Component
 		public class MyWebSocketHandler extends TextWebSocketHandler {
 	// 当MyWebSocketHandler类被加载时就会创建该Map，随类而生
@@ -152,7 +152,7 @@ tag: 个人学习
 
 }
 
-##在xml配置中拦截器，并且添加xml规范(xmlns:websocket及xsi:schemaLocation)。
+## 在xml配置中拦截器，并且添加xml规范(xmlns:websocket及xsi:schemaLocation)。
 	<!-- 配置好处理器 -->
 	<bean id="websocketHandler" class="com.huanghongyuan.front.webSocket.MyWebSocketHandler" />
 	<!-- 配置拦截器 -->
@@ -163,7 +163,7 @@ tag: 个人学习
 		</websocket:handshake-interceptors>
 	</websocket:handlers>
 
-##添加websocket的jar包，注意：websocket-api跟websocket会有冲突，取websocket即可。
+## 添加websocket的jar包，注意：websocket-api跟websocket会有冲突，取websocket即可。
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-messaging</artifactId>
@@ -189,7 +189,7 @@ tag: 个人学习
 			<artifactId>gson</artifactId>
 			<version>2.3.1</version>
 		</dependency>
-##前端
+## 前端
 	var data = {}; //新建data对象，并规定属性名与相应的值
 	data['fromId'] = null;
 	data['fromName'] = null;
@@ -236,5 +236,3 @@ tag: 个人学习
 		$("#charRoomShow2").append(appendMsg);
 		ws.send(JSON.stringify(data)); //将对象封装成JSON后发送至服务器
 	}
-
-##
