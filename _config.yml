@@ -10,8 +10,9 @@ url: "http://huanghongyuan.cn/#blog"
 
 # Comment
 comment:
-    disqus: hongyits
+    disqus: 251152685
     uyan: 2149458  # 有言id,登录有言官网申请
+    
 
 # Social
 social:
