@@ -1,24 +1,22 @@
 # Basic
-title: 黄宏源
-subtitle: 成长的记忆屋
+title: 罗云辉
+subtitle: 学习博客
 description: 
 # 头像里面的标题
-avatarTitle: 黄宏源
+avatarTitle: 可罗云辉
 # 头像里面的描述
-avatarDesc: 希望能够成长
-url: "http://huanghongyuan.cn/#blog"
+avatarDesc: 学无止境
+url: "http://luoyunhui.cn/#blog"
 
 # Comment
 comment:
     disqus: 251152685
-    uyan: 2149458  # 有言id,登录有言官网申请
+    uyan: 2159114  # 友言id,登录友言官网申请
     
 
 # Social
 social:
-    weibo: 不改了不改了hhy
-    weiboUrl: u/3212886710
-    github: hongyits
+    github: lyh00
 
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 
